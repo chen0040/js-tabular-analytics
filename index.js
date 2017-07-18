@@ -1,1 +1,1 @@
-module.exports = require('./src/jsstats');
+module.exports = require('./src/jstabular');

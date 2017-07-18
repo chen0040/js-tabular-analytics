@@ -1,9 +1,9 @@
 var expect    = require("chai").expect;
-var jsstats = require("../src/jsstats");
+var jstabular = require("../src/jstabular");
 
 describe("Create chi square distribution", function() {
   describe("default constructor", function() {
-    var distribution = new jsstats.ChiSquareDistribution(20);
+    var distribution = new jstabular.ChiSquareDistribution(20);
     it("has df of 10.00", function() {
     	expect(distribution.df).to.equal(20); 
       
@@ -11,7 +11,7 @@ describe("Create chi square distribution", function() {
   });
 
   describe('run cumulative probability', function(){
-    var distribution = new jsstats.ChiSquareDistribution(20);
+    var distribution = new jstabular.ChiSquareDistribution(20);
     it('has cumulativeProbability working', function(){
       for(var X=0.2; X < 10.0; X += 0.5){
         console.log(X + ': ' + distribution.cumulativeProbability(X));

@@ -1,9 +1,9 @@
 var expect    = require("chai").expect;
-var jsstats = require("../src/jsstats");
+var jstabular = require("../src/jstabular");
 
 describe("Create normal distribution", function() {
   describe("default constructor", function() {
-    var distribution = new jsstats.NormalDistribution();
+    var distribution = new jstabular.NormalDistribution();
     it("has mean of 0.0 and sd of 1.0", function() {
     	
       console.log('lnconstant: ' + distribution.lnconstant);
@@ -23,7 +23,7 @@ describe("Create normal distribution", function() {
 
   describe("Constructor with arguments", function() {
     it("has user-defined mean and sd", function() {
-    	var distribution = new jsstats.NormalDistribution(5.0, 12.0);
+    	var distribution = new jstabular.NormalDistribution(5.0, 12.0);
     	expect(distribution.mean).to.equal(5.0);
     	expect(distribution.sd).to.equal(12.0);
     });

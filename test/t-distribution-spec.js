@@ -1,9 +1,9 @@
 var expect    = require("chai").expect;
-var jsstats = require("../src/jsstats");
+var jstabular = require("../src/jstabular");
 
 describe("Create t distribution", function() {
   describe("default constructor", function() {
-    var distribution = new jsstats.TDistribution(10.0);
+    var distribution = new jstabular.TDistribution(10.0);
     it("has df of 10.0", function() {
     	expect(distribution.df).to.equal(10.0); 
       
@@ -11,7 +11,7 @@ describe("Create t distribution", function() {
   });
 
   describe('run cumulative probability', function(){
-    var distribution = new jsstats.TDistribution(10);
+    var distribution = new jstabular.TDistribution(10);
     it('has probability of 0.5 at t_df = 0', function(){
       expect(distribution.cumulativeProbability(0.0)).to.equal(0.5);
     });

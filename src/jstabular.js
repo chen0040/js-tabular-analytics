@@ -1,4 +1,4 @@
-var jsstats = jsstats || {};
+var jstabular = jstabular || {};
 
 (function(jss){
 	var NormalDistribution = function(mean, sd){
@@ -369,7 +369,7 @@ var jsstats = jsstats || {};
         even = ((parseInt(2 * (df / 2), 2)) == df);
         if (df > 1)
             y = Math.exp(-a); //((-a < -bigx) ? 0.0 : Math.exp (-a));
-        s = (even ? y : (2.0 * (new jsstats.NormalDistribution(0.0, 1.0).cumulativeProbability(-Math.sqrt(x)))));
+        s = (even ? y : (2.0 * (new jstabular.NormalDistribution(0.0, 1.0).cumulativeProbability(-Math.sqrt(x)))));
         if (df > 2)
         {
             x = 0.5 * (df - 1.0);
@@ -412,9 +412,9 @@ var jsstats = jsstats || {};
 
     jss.ChiSquareDistribution = ChiSquareDistribution;
 
-})(jsstats);
+})(jstabular);
 
 var module = module || {};
 if(module) {
-	module.exports = jsstats;
+	module.exports = jstabular;
 }
